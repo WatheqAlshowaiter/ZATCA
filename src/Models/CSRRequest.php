@@ -125,7 +125,7 @@ class CSRRequest
     public function setUID(string $UID): self
     {
         if (strlen($UID) !== 15 || substr($UID, 0, 1) != '3' || substr($UID, -1, 1) != '3') {
-            throw new CSRValidationException('The Organization Identifier must be 15 digits, starting andending with 3 ', 422);
+            throw new CSRValidationException('The Organization Identifier must be 15 digits, starting and ending with 3 ', 422);
         }
 
         $this->UID = $UID;
@@ -252,3 +252,4 @@ class CSRRequest
         return $this->countryName;
     }
 }
+
